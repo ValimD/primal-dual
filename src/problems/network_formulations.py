@@ -99,6 +99,7 @@ def build_max_flow(data: dict, prizes: Mapping[int, float] | None = None) -> Mod
                 A[i, position * num_arcs + arc_index] += 1.0
 
     row = m
+    # Commodities sharing the same arcs
     for position, commodity in enumerate(commodities):
         source = data["sources"][commodity]
         sink = data["sinks"][commodity]
